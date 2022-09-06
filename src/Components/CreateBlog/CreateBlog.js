@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./CreateBlog.css"
 import {Link} from "react-router-dom";
 import {ArrowBack} from "@mui/icons-material";
@@ -6,9 +6,10 @@ import db from "../../Common/firebase";
 import {Formik} from "formik";
 import * as Yup from 'yup';
 
-import {Button, FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
+import {Alert, Button, FormControl, InputLabel, MenuItem, Select, TextField} from "@mui/material";
 
 function CreateBlog() {
+    const [submit, setSubmit] = useState('')
     return <div>
         <div className={"back-link"}>
             <Link to={"/"}> <ArrowBack/><span className={"back-button"}>Back</span></Link>
@@ -29,7 +30,18 @@ function CreateBlog() {
 
                 onSubmit={(values, formikHelpers) => {
                     formikHelpers.setSubmitting(false)
-                    db.collection('Blogs').add(values);
+                    setSubmit("")
+                    db.collection('Blogs').add(values).then(value => {
+                        formikHelpers.resetForm({
+                            title: '',
+                            coverImage: '',
+                            type: '',
+                            authorName: '',
+                            authorImage: '',
+                            description: ''
+                        })
+                        setSubmit("Your Blog has been added")
+                    });
                 }}
                 validationSchema={Yup.object().shape({
                     title: Yup.string()
@@ -57,6 +69,10 @@ function CreateBlog() {
                       handleBlur
                   }) => (
                     <form onSubmit={handleSubmit}>
+                        {
+                            submit &&
+                            <Alert className={"alert"} severity="success">{submit}</Alert>
+                        }
                         <div className={"form-wrapper"}>
                             <div>
                                 <FormControl fullWidth>
