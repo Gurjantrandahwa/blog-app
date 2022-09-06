@@ -1,0 +1,38 @@
+.back-link a {
+    text-decoration: none !important;
+    color: black;
+    justify-items: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.back-button {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.back-link h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.create-blog-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.create-blog-wrapper form {
+    margin-top: 20px;
+}
+
+.form-wrapper > div {
+    margin-bottom: 10px;
+    width: 300px;
+
+}
+.input-feedback{
+    color: red;
+}
+
+

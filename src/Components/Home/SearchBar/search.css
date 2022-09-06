@@ -1,0 +1,42 @@
+.header > h1 {
+    font-size: 30px;
+    color:  #0000fb;
+    margin-bottom: 20px;
+}
+
+.searchBar-wrapper {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+}
+
+.searchBar-wrapper > form > input {
+    background-color: #6f66dc;
+    outline: none !important;
+    height: 30px;
+    border-radius: 6px;
+    width: 250px;
+    padding: 5px;
+    align-items: center;
+    color: white;
+    border: none;
+}
+.searchBar-wrapper input::placeholder {
+    color: black;
+    opacity: 1;
+}
+.searchBar-wrapper a {
+    text-decoration: none !important;
+}
+
+.searchBar-wrapper Button {
+    border: none;
+    border-radius: 5px !important;
+    background-color: #0000fb !important;
+    color: #f0f0f0;
+    text-transform: none !important;
+    padding: 5px 20px;
+}
+.checkbox{
+    display: flex;
+}

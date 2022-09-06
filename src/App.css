@@ -1,0 +1,10 @@
+
+.empty-list {
+    display: flex;
+    justify-content: center;
+
+}
+
+.empty-list > h1 {
+    color: deepskyblue;
+}
