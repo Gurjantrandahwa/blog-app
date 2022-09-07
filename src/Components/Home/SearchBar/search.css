@@ -39,4 +39,5 @@
 }
 .checkbox{
     display: flex;
+    flex-wrap: wrap;
 }
