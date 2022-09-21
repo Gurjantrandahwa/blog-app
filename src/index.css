@@ -4,7 +4,10 @@
 }
 
 body {
-    background-color: #e0ebff;
+    background-image: linear-gradient(to right, #d6ad61, #ce8d51, #c16d48, #b04e44, #9a2f43);
+    background-repeat: no-repeat;
+
+ height: 116vh;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

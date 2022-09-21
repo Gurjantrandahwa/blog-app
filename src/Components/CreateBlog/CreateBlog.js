@@ -17,7 +17,6 @@ function CreateBlog() {
         </div>
 
         <div className={"create-blog-wrapper"}>
-
             <Formik
                 initialValues={{
                     title: '',
